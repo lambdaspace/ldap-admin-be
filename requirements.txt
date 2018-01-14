@@ -1,0 +1,4 @@
+aiohttp>=2.3
+aiohttp_route
+gunicorn>=19.7.1
+ldap3
