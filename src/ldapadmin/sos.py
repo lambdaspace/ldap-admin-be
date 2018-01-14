@@ -9,24 +9,24 @@ __all__ = (sos_list, sos_detail, sos_create, sos_update, sos_delete)
 
 @route('GET', '/sos/')
 async def sos_list(request):
-    pass
+    web.Response(text='')
 
 
 @route('GET', '/sos/{sid}/')
 async def sos_detail(request):
-    pass
+    web.Response(text='')
 
 
 @route('POST', '/sos/')
 async def sos_create(request):
-    pass
+    web.Response(text='')
 
 
 @route('PUT', '/sos/{sid}/')
 async def sos_update(request):
-    pass
+    web.Response(text='')
 
 
 @route('DELETE', '/sos/{sid}/')
 async def sos_delete(request):
-    pass
+    web.Response(text='')
