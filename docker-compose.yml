@@ -1,7 +1,7 @@
 version: '2'
 services:
   openldap:
-    image: osixia/openldap:1.1.7
+    image: osixia/openldap:1.1.11
     restart: unless-stopped
     container_name: openldap
     environment:
@@ -26,8 +26,8 @@ services:
       #LDAP_SSL_HELPER_PREFIX: "ldap"
       LDAP_REPLICATION: "false"
       LDAP_REMOVE_CONFIG_AFTER_SETUP: "true"
-    tty: true
-    stdin_open: true
+    #tty: true
+    #stdin_open: true
     volumes:
       - "./config/ldap:/var/lib/ldap"
       - "./config/ldap:/etc/ldap/slapd.d"
