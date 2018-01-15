@@ -1,5 +1,6 @@
 .git
 .gitignore
+/config/
 /**/__pycache__/
 Dockerfile
 .dockerignore
