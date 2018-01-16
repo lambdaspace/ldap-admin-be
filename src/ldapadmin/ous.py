@@ -2,6 +2,7 @@
 A CRUD view model for ldap Organisational Units.
 '''
 from aiohttp import web
+from aiohttp_route import route
 
 
 __all__ = (ous_list, ous_detail, ous_create, ous_update, ous_delete)

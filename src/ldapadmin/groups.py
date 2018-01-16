@@ -2,6 +2,7 @@
 A CRUD view model for ldap Groups.
 '''
 from aiohttp import web
+from aiohttp_route import route
 
 
 __all__ = (groups_list, groups_detail, groups_create, groups_update, groups_delete)

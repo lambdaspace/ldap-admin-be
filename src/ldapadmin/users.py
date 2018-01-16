@@ -2,6 +2,7 @@
 A CRUD view model for ldap Users.
 '''
 from aiohttp import web
+from aiohttp_route import route
 
 
 __all__ = (users_list, users_detail, users_create, users_update, users_delete)

@@ -2,6 +2,7 @@
 A CRUD view model for ldap Security Object.
 '''
 from aiohttp import web
+from aiohttp_route import route
 
 
 __all__ = (sos_list, sos_detail, sos_create, sos_update, sos_delete)
