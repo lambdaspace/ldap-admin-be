@@ -5,9 +5,6 @@ from aiohttp import web
 from aiohttp_route import route
 
 
-__all__ = (users_list, users_detail, users_create, users_update, users_delete)
-
-
 @route('GET', '/users/')
 async def users_list(request):
     return web.Response(text='')

@@ -5,9 +5,6 @@ from aiohttp import web
 from aiohttp_route import route
 
 
-__all__ = (sos_list, sos_detail, sos_create, sos_update, sos_delete)
-
-
 @route('GET', '/sos/')
 async def sos_list(request):
     return web.Response(text='')

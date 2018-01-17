@@ -5,9 +5,6 @@ from aiohttp import web
 from aiohttp_route import route
 
 
-__all__ = (groups_list, groups_detail, groups_create, groups_update, groups_delete)
-
-
 @route('GET', '/groups/')
 async def groups_list(request):
     return web.Response(text='')
