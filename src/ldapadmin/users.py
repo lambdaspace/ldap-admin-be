@@ -7,7 +7,15 @@ from aiohttp_route import route
 
 @route('GET', '/users/')
 async def users_list(request):
-    return web.Response(text='')
+    request.app['ldap'].search(
+        'dc=example,dc=com',
+        '(objectClass=person)',
+        attributes=['objectClass', 'description', 'cn', 'dc']
+    )
+    return web.json_response([
+        entry.entry_attributes_as_dict
+        for entry in request.app['ldap'].entries
+    ])
 
 
 @route('GET', '/users/{uid}/')
