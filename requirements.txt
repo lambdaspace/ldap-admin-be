@@ -1,5 +1,6 @@
-aiohttp>=2.3
-aiohttp_route
-gunicorn>=19.7.1
-ldap3
-yarl==0.18.0
+aiohttp==2.3.8
+aiohttp-route==0.0.2
+cryptography==1.7.1
+gunicorn==19.7.1
+ldap3==2.4
+yarl==1.0.0
