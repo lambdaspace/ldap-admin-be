@@ -1,4 +1,5 @@
 import asyncio
+import aiohttp_cors
 
 from aiohttp import web
 from aiohttp_route import router
@@ -9,7 +10,18 @@ from ldapadmin import crud
 
 async def get_app():
     app = web.Application()
-    router(app, [crud])
+    routes = router(app, [crud])
+
+    cors = aiohttp_cors.setup(app, defaults={
+        "*": aiohttp_cors.ResourceOptions(
+            allow_credentials=True,
+            expose_headers="*",
+            allow_headers="*"
+        )
+    })
+
+    for route in routes:
+        cors.add(route)
 
     app['ldap'] = Connection(
         Server('openldap'),
